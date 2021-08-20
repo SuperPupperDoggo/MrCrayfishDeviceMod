@@ -1,3 +1,5 @@
+Note: This is not the original version of the mod.
+
 ### **Source installation information for modders**
 ***
 
