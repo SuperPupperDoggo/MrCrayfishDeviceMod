@@ -1,4 +1,4 @@
-itemGroup.cdmTabDevice=MrCrayfish's Device Mod
+itemGroup.cdmTabDevice=Crayfish Device Mod - Continued
 
 tile.laptop.name=Laptop
 tile.router.name=Router
@@ -29,10 +29,11 @@ item.plastic_frame.name=Plastic Frame
 item.wheel.name=Wheel
 
 app.cdm.settings.name=Settings
+app.cdm.settings.desc=Modify and personalize the appearance and behaviors of your device
 app.cdm.settings.Author=MrCrayfish
 
 app.cdm.app_store.name=Application Market
-app.cdm.app_store.desc=null
+app.cdm.app_store.desc=The official application market for the Device Mod. Allows you to install apps to add more functionality to your device.
 app.cdm.app_store.Author=MrCrayfish
 
 app.cdm.bank.name=Bank
@@ -40,9 +41,11 @@ app.cdm.bank.desc=The official bank application for the Device Mod. Allow you to
 app.cdm.bank.author=MrCrayfish
 
 app.cdm.example.name=UI Components
+app.cdm.example.desc=Application description
 app.cdm.example.author=MrCrayfish
 
 app.cdm.file_browser.name=File Browser
+app.cdm.file_browser.desc=The official file manager application for the Device Mod. Allows you to browse, sort, open, copy and delete your files.
 app.cdm.file_browser.author=MrCrayfish
 
 app.cdm.note_stash.name=Note Stash
@@ -50,6 +53,7 @@ app.cdm.note_stash.desc=The official note application for the Device Mod. Allows
 app.cdm.note_stash.author=MrCrayfish
 
 app.cdm.pixel_painter.name=Pixel Painter
+app.cdm.pixel_painter.desc=The official paint application for the Device Mod. Allows you to make simple drawings.
 app.cdm.pixel_painter.author=MrCrayfish
 
 app.cdm.ender_mail.name=EnderMail
@@ -60,6 +64,7 @@ app.cdm.boat_racers.name=Boat Racers
 app.cdm.boat_racers.author=MrCrayfish
 
 app.cdm.mine_bay.name=MineBay
+app.cdm.mine_bay.name=The official auction application for the device mod. Allows participate in and host item auctions with other players on the server.
 app.cdm.mine_bay.author=MrCrayfish
 
 message.select_router=Now select a router to connect this device to.
