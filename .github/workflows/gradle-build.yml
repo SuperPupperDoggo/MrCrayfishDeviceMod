@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: 'Mod build'
-        path: './build/libs/device-mod-0.4.1-1.12.2.jar'
+        path: './build/'
     - name: Upload output file
       uses: actions/upload-artifact@v2
       with:
