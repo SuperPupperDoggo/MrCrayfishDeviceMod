@@ -38,12 +38,14 @@ jobs:
       run: ./gradlew build
       env:
         JAVA_HOME: ""
-    
-    - name: List Files
-      run: ls ./build/
       
     - name: Upload output file
       uses: actions/upload-artifact@v2
       with:
-        name: upload-build
+        name: 'Mod build'
+        path: './build/libs/device-mod-0.4.1-1.12.2.jar'
+    - name: Upload output file
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'Build folder'
         path: './build/libs/device-mod-0.4.1-1.12.2.jar'
