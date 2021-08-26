@@ -1,4 +1,4 @@
-package com.mrcrayfish.device.programs.auction.task;
+package com.mrcrayfish.device.programs;
 
 import com.mrcrayfish.device.api.task.Task;
 import com.mrcrayfish.device.programs.AuctionManager;
