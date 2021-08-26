@@ -100,6 +100,11 @@ public class MrCrayfishDeviceMod
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) 
 	{
+		public static boolean cfmInstalled = false;
+		cfmInstalled = Loader.isModLoaded("cfm");
+		public static boolean galacticraftInstalled = false;
+		galacticraftInstalled = Loader.isModLoaded("galacticraftcore");
+		
 		proxy.postInit();
 	}
 
@@ -165,8 +170,18 @@ public class MrCrayfishDeviceMod
 			ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "icons"), ApplicationIcons.class);
 			ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "text_area"), ApplicationTextArea.class);
 			ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "test"), ApplicationTest.class);
+			//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"redstone_output_level"),ApplicationClass.class)
 
 			TaskManager.registerTask(TaskNotificationTest.class);
+		}
+		if (cfmInstalled)
+		{
+		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"smart_light_controller"),ApplicationClass.class)
+		}
+		if (galacticraftInstalled)
+		{
+		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"galaxy_map"),ApplicationClass.class)
+		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"telemetry_monitor"),ApplicationClass.class)
 		}
 
 		PrintingManager.registerPrint(new ResourceLocation(Reference.MOD_ID, "picture"), ApplicationPixelPainter.PicturePrint.class);
