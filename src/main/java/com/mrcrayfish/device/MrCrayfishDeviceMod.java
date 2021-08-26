@@ -103,8 +103,8 @@ public class MrCrayfishDeviceMod
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) 
 	{
-		cfmInstalled = Loader.isModLoaded("cfm");
-		galacticraftInstalled = Loader.isModLoaded("galacticraftcore");
+		//cfmInstalled = Loader.isModLoaded("cfm");
+		//galacticraftInstalled = Loader.isModLoaded("galacticraftcore");
 		
 		proxy.postInit();
 	}
