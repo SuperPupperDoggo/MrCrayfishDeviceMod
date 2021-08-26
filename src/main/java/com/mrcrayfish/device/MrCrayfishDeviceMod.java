@@ -58,6 +58,9 @@ public class MrCrayfishDeviceMod
 	private static Logger logger;
 
 	public static final boolean DEVELOPER_MODE = true;
+	
+	public static boolean cfmInstalled = false;
+	public static boolean galacticraftInstalled = false;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) throws LaunchException
@@ -100,9 +103,7 @@ public class MrCrayfishDeviceMod
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) 
 	{
-		public static boolean cfmInstalled = false;
 		cfmInstalled = Loader.isModLoaded("cfm");
-		public static boolean galacticraftInstalled = false;
 		galacticraftInstalled = Loader.isModLoaded("galacticraftcore");
 		
 		proxy.postInit();
