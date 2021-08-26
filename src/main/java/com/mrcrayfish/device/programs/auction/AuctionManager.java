@@ -1,4 +1,4 @@
-package com.mrcrayfish.device.programs.auction;
+package com.mrcrayfish.device.programs;
 
 import com.mrcrayfish.device.programs.auction.object.AuctionItem;
 import net.minecraft.nbt.NBTTagCompound;
