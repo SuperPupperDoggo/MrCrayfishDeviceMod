@@ -65,11 +65,11 @@ public class MrCrayfishDeviceMod
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) throws LaunchException
 	{
-		if(DEVELOPER_MODE && !(Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment"))
+		/*if(DEVELOPER_MODE && !(Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment"))
 		{
 			throw new LaunchException();
 		}
-		logger = event.getModLog();
+		logger = event.getModLog();*/
 
 		DeviceConfig.load(event.getSuggestedConfigurationFile());
 		MinecraftForge.EVENT_BUS.register(new DeviceConfig());
