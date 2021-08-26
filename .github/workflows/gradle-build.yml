@@ -40,10 +40,10 @@ jobs:
         JAVA_HOME: ""
     
     - name: List Files
-      run: ls ./
+      run: ls ./build/
       
     - name: Upload output file
       uses: actions/upload-artifact@v2
       with:
         name: upload-build
-        path: '*.jar'
+        path: './build/*.jar'
