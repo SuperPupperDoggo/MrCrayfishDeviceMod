@@ -27,10 +27,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     
     - name: Set Up
-      run: ./gradle setupCIWorkspace
+      run: ./gradlew setupCIWorkspace
 
     - name: Build with Gradle
-      run: ./gradle build
+      run: ./gradlew build
     
     - name: List Files
       run: ls ./
