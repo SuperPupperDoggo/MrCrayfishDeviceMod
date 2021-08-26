@@ -2,7 +2,7 @@ package com.mrcrayfish.device.programs.auction.task;
 
 import com.mrcrayfish.device.api.task.Task;
 import com.mrcrayfish.device.api.utils.BankUtil;
-import com.mrcrayfish.device.programs.auction.AuctionManager;
+import com.mrcrayfish.device.programs.AuctionManager;
 import com.mrcrayfish.device.programs.auction.object.AuctionItem;
 import com.mrcrayfish.device.programs.system.object.Account;
 import net.minecraft.entity.item.EntityItem;
