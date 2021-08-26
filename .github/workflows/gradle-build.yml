@@ -27,7 +27,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     
     - name: Set Up Permissions
-      run: chmod -x 700 ./gradlew
+      run: chmod a+x ./gradlew
       
     - name: Set Up
       run: ./gradlew setupCIWorkspace
