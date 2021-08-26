@@ -46,4 +46,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: upload-build
-        path: './build/libs/*.jar'
+        path: './build/libs/device-mod-0.4.1-1.12.2.jar'
