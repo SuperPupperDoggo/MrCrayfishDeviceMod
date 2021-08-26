@@ -31,9 +31,13 @@ jobs:
       
     - name: Set Up
       run: ./gradlew setupCIWorkspace
+      env:
+        JAVA_HOME: ""
 
     - name: Build with Gradle
       run: ./gradlew build
+      env:
+        JAVA_HOME: ""
     
     - name: List Files
       run: ls ./
