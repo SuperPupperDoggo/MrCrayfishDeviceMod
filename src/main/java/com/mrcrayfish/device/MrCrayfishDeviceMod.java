@@ -161,7 +161,7 @@ public class MrCrayfishDeviceMod
 		// Tasks (Normal)
 		TaskManager.registerTask(TaskAddAuction.class);
 		TaskManager.registerTask(TaskGetAuctions.class);
-		TaskManager.registerTask(TaskBuyItem.class);
+		//TaskManager.registerTask(TaskBuyItem.class);
 		
 		if(!DEVELOPER_MODE)
 		{
