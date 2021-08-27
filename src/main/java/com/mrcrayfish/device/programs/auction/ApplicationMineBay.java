@@ -1,4 +1,4 @@
-package com.mrcrayfish.device.programs;
+package com.mrcrayfish.device.programs.auction;
 
 import com.mrcrayfish.device.api.app.Application;
 import com.mrcrayfish.device.api.app.Dialog;
