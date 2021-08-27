@@ -25,3 +25,4 @@ public void render(Entity entityIn, float limbSwing, float limbSwingAmount, floa
         this.boatSides[i].render(scale);
     }
 }
+}
