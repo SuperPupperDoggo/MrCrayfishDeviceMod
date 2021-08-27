@@ -50,13 +50,13 @@ public class ApplicationBoatRacers extends Application
 			e.printStackTrace();
 		}
 		
-		tileGrid = new TileGrid(266, 3, game);
+		tileGrid = new TileGrid(314, 3, game);
 		layoutLevelEditor.addComponent(tileGrid);
 		
-		labelLayer = new Label("1", 320, 108);
+		labelLayer = new Label("1", 280, 108);
 		layoutLevelEditor.addComponent(labelLayer);
 		
-		btnNextLayer = new Button(314, 106, Icons.CHEVRON_RIGHT);
+		btnNextLayer = new Button(266, 106, Icons.CHEVRON_RIGHT);
 		btnNextLayer.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
             game.nextLayer();
@@ -64,7 +64,7 @@ public class ApplicationBoatRacers extends Application
         });
 		layoutLevelEditor.addComponent(btnNextLayer);
 		
-		btnPrevLayer = new Button(266, 106, Icons.CHEVRON_LEFT);
+		btnPrevLayer = new Button(314, 106, Icons.CHEVRON_LEFT);
 		btnPrevLayer.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
             game.prevLayer();
