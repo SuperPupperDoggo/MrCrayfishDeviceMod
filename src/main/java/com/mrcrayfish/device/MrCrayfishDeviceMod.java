@@ -161,9 +161,9 @@ public class MrCrayfishDeviceMod
 		ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "mine_bay"), ApplicationMineBay.class);
 
 		// Tasks (Normal)
-		//TaskManager.registerTask(TaskAddAuction.class);
-		//TaskManager.registerTask(TaskGetAuctions.class);
-		//TaskManager.registerTask(TaskBuyItem.class);
+		TaskManager.registerTask(TaskAddAuction.class);
+		TaskManager.registerTask(TaskGetAuctions.class);
+		TaskManager.registerTask(TaskBuyItem.class);
 		
 		if(!DEVELOPER_MODE)
 		{
