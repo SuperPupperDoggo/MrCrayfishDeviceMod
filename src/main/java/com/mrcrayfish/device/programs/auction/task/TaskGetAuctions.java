@@ -1,7 +1,7 @@
 package com.mrcrayfish.device.programs.auction.task;
 
 import com.mrcrayfish.device.api.task.Task;
-import com.mrcrayfish.device.programs.AuctionManager;
+import com.mrcrayfish.device.programs.auction.AuctionManager;
 import com.mrcrayfish.device.programs.auction.object.AuctionItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
