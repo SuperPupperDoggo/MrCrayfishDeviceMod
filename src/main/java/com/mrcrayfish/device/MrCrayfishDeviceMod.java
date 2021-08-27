@@ -23,6 +23,8 @@ import com.mrcrayfish.device.programs.email.task.*;
 import com.mrcrayfish.device.programs.example.ApplicationExample;
 import com.mrcrayfish.device.programs.example.task.TaskNotificationTest;
 import com.mrcrayfish.device.programs.gitweb.ApplicationGitWeb;
+import com.mrcrayfish.device.programs.auction.*;
+import com.mrcrayfish.device.programs.auction.task.*;
 import com.mrcrayfish.device.programs.system.ApplicationAppStore;
 import com.mrcrayfish.device.programs.system.ApplicationBank;
 import com.mrcrayfish.device.programs.system.ApplicationFileBrowser;
