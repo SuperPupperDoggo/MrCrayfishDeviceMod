@@ -3,6 +3,7 @@ package com.mrcrayfish.device.object;
 import com.mrcrayfish.device.object.Game.Layer;
 import com.mrcrayfish.device.object.tiles.Tile;
 import com.mrcrayfish.device.util.Vec2d;
+import com.superpupperdoggo.device.model.ModelBoatNoEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBoat;
@@ -25,7 +26,7 @@ public class Player
 	private Vec2d direction;
 	private Vec2d velocity;
 	
-	private ModelBoat boatModel;
+	private ModelBoatNoEntity boatModel;
 	private ModelDummyPlayer playerModel;
 	
 	boolean canMove = false;
@@ -132,7 +133,7 @@ public class Player
 		GlStateManager.rotate(-20F, 1.0F, 0.0F, 0.0F);
 		GlStateManager.rotate(rot, 0.0F, 1.0F, 0.0F);
 		Minecraft.getMinecraft().getTextureManager().bindTexture(boatTextures);
-		boatModel.render((Entity) null, 0F, 0F, 0F, 0F, 0F, 1F);
+		//boatModel.render((Entity) null, 0F, 0F, 0F, 0F, 0F, 1F);
 		GlStateManager.popMatrix();
 		
 		GlStateManager.pushMatrix();
