@@ -3,7 +3,7 @@ package com.mrcrayfish.device.object;
 import com.mrcrayfish.device.object.Game.Layer;
 import com.mrcrayfish.device.object.tiles.Tile;
 import com.mrcrayfish.device.util.Vec2d;
-import com.superpupperdoggo.device.model.ModelBoatNoEntity;
+import com.mrcrayfish.device.model.ModelBoatNoEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBoat;
