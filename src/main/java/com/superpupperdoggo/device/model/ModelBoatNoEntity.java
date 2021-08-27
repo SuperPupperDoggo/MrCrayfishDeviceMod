@@ -1,4 +1,4 @@
-package com.superpupperdoggo.device.model;
+package com.mrcrayfish.device.model;
 
 import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.GlStateManager;
