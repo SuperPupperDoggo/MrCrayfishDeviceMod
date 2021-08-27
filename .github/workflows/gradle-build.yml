@@ -39,13 +39,13 @@ jobs:
       env:
         JAVA_HOME: ""
       
+#    - name: Upload build folder
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: 'Build Folder'
+#        path: './build/'
     - name: Upload output file
       uses: actions/upload-artifact@v2
       with:
-        name: 'Mod build'
-        path: './build/'
-    - name: Upload output file
-      uses: actions/upload-artifact@v2
-      with:
-        name: 'Build folder'
+        name: 'devicemodcontinued-devbuild'
         path: './build/libs/device-mod-0.4.1-1.12.2.jar'
