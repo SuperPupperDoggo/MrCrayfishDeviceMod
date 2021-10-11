@@ -186,31 +186,38 @@ public class ApplicationSettings extends SystemApplication
 		layoutColorScheme.addComponent(buttonPrevious);
 
 		ComboBox.Custom<Integer> comboBoxTextColor = createColorPicker(145, 26);
-		mc.fontRenderer.drawString("Text Color", 6, 26, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		txtcolorLabel = new Label("Text Color", 6, 26);
+		layoutColorScheme.addComponent(txtcolorLabel);
 		layoutColorScheme.addComponent(comboBoxTextColor);
 
 		ComboBox.Custom<Integer> comboBoxTextSecondaryColor = createColorPicker(145, 44);
-		mc.fontRenderer.drawString("Text Secondary Color", 6, 44, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		txtScolorLabel = new Label("Text Secondary Color", 6, 44);
+		layoutColorScheme.addComponent(bgScolorLabel);
 		layoutColorScheme.addComponent(comboBoxTextSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxHeaderColor = createColorPicker(145, 62);
-		mc.fontRenderer.drawString("Header Color", 6, 62, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		headerColorLabel = new Label("Header Color", 6, 62);
+		layoutColorScheme.addComponent(headerColorLabel);
 		layoutColorScheme.addComponent(comboBoxHeaderColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundColor = createColorPicker(145, 80);
-		mc.fontRenderer.drawString("Background Color", 6, 80, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		bgcolorLabel = new Label("Background Color", 6, 80);
+		layoutColorScheme.addComponent(bgcolorLabel);
 		layoutColorScheme.addComponent(comboBoxBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundSecondaryColor = createColorPicker(145, 98);
-		mc.fontRenderer.drawString("Background Secondary Color", 6, 98, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		bgScolorLabel = new Label("Background Secondary Color", 6, 98);
+		layoutColorScheme.addComponent(bgScolorLabel);
 		layoutColorScheme.addComponent(comboBoxBackgroundSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxItemBackgroundColor = createColorPicker(145, 116);
-		mc.fontRenderer.drawString("Item Background Color", 6, 116, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		itembgcolorLabel = new Label("Item Background Color", 6, 116);
+		layoutColorScheme.addComponent(itembgcolorLabel);
 		layoutColorScheme.addComponent(comboBoxItemBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxItemHighlightColor = createColorPicker(145, 134);
-		mc.fontRenderer.drawString("Item Highlight Color", 6, 134, getLaptop().getSettings().getColorScheme().getTextColor(), true);
+		itemhiglightcolorLabel = new Label("Item Highlight Color", 6, 134);
+		layoutColorScheme.addComponent(itemhighlightcolorLabel);
 		layoutColorScheme.addComponent(comboBoxItemHighlightColor);
 
 		buttonColorSchemeApply = new Button(145, 5, Icons.CHECK);
