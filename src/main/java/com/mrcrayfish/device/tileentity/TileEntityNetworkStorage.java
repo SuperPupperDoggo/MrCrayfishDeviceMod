@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TileEntityNetworkStorage extends TileEntityNetworkDevice
 {
-	private FileSystem fileSystem;
+	//private FileSystem fileSystem;
 
 	@Override
 	public String getDeviceName()
@@ -31,10 +31,10 @@ public class TileEntityNetworkStorage extends TileEntityNetworkDevice
 	public void readFromNBT(NBTTagCompound compound) 
 	{
 		super.readFromNBT(compound);
-		if(compound.hasKey("file_system"))
+		/*if(compound.hasKey("file_system"))
 		{
 			this.fileSystem = new FileSystem(this, compound.getCompoundTag("file_system"));
-		}
+		}*/
 	}
 	
 	@Override
@@ -42,10 +42,10 @@ public class TileEntityNetworkStorage extends TileEntityNetworkDevice
 	{
 		super.writeToNBT(compound);
 
-		if(fileSystem != null)
+		/*if(fileSystem != null)
 		{
 			compound.setTag("file_system", fileSystem.toTag());
-		}
+		}*/
 		return compound;
 	}
 
@@ -70,13 +70,13 @@ public class TileEntityNetworkStorage extends TileEntityNetworkDevice
 		return INFINITE_EXTENT_AABB;
 	}
 
-	public FileSystem getFileSystem()
+	/*public FileSystem getFileSystem()
 	{
 		if(fileSystem == null)
 		{
 			fileSystem = new FileSystem(this, new NBTTagCompound());
 		}
 		return fileSystem;
-	}
+	}*/
 
 }
