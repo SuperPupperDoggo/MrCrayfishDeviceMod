@@ -93,7 +93,7 @@ public class ApplicationSettings extends SystemApplication
 		layoutGeneral = new Menu("General");
 		layoutGeneral.addComponent(buttonPrevious);
 
-		checkBoxShowApps = new CheckBox("Show All Apps", 5, 5);
+		checkBoxShowApps = new CheckBox("Show All Apps", 5, 75);
 		checkBoxShowApps.setSelected(Settings.isShowAllApps());
 		checkBoxShowApps.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
@@ -170,7 +170,7 @@ public class ApplicationSettings extends SystemApplication
 			}
 		});
 
-		Button buttonReset = new Button(116, 100, "Reset Color Scheme");
+		Button buttonReset = new Button(76, 100, "Reset Color Scheme");
 		buttonReset.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
             if(mouseButton == 0)
@@ -183,29 +183,37 @@ public class ApplicationSettings extends SystemApplication
 
 		layoutColorScheme = new Menu("UI Colors");
 		layoutPersonalise.addComponent(buttonPrevious);
+		layoutColorScheme.addComponent(buttonPrevious);
 
 		ComboBox.Custom<Integer> comboBoxTextColor = createColorPicker(145, 26);
+		mc.fontRenderer.drawString("Text Color", 6, 26, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxTextColor);
 
 		ComboBox.Custom<Integer> comboBoxTextSecondaryColor = createColorPicker(145, 44);
+		mc.fontRenderer.drawString("Text Secondary Color", 6, 44, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxTextSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxHeaderColor = createColorPicker(145, 62);
+		mc.fontRenderer.drawString("Header Color", 6, 62, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxHeaderColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundColor = createColorPicker(145, 80);
+		mc.fontRenderer.drawString("Background Color", 6, 80, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundSecondaryColor = createColorPicker(145, 98);
+		mc.fontRenderer.drawString("Background Secondary Color", 6, 98, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxBackgroundSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxItemBackgroundColor = createColorPicker(145, 116);
+		mc.fontRenderer.drawString("Item Background Color", 6, 116, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxItemBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxItemHighlightColor = createColorPicker(145, 134);
+		mc.fontRenderer.drawString("Item Highlight Color", 6, 134, getLaptop().getSettings().getColorScheme().getTextColor(), true);
 		layoutColorScheme.addComponent(comboBoxItemHighlightColor);
 
-		buttonColorSchemeApply = new Button(5, 79, Icons.CHECK);
+		buttonColorSchemeApply = new Button(145, 5, Icons.CHECK);
 		buttonColorSchemeApply.setEnabled(true);
 		buttonColorSchemeApply.setToolTip("Apply", "Set these colors as the new color scheme");
 		buttonColorSchemeApply.setClickListener((mouseX, mouseY, mouseButton) ->
