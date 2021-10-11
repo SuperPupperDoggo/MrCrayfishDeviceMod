@@ -47,20 +47,20 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.WORKING_MC_VERSION)
-public class MrCrayfishDeviceMod 
+public class MrCrayfishDeviceMod
 {
 	@Instance(Reference.MOD_ID)
 	public static MrCrayfishDeviceMod instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
+
 	public static final CreativeTabs TAB_DEVICE = new DeviceTab("cdmTabDevice");
 
 	private static Logger logger;
 
 	public static final boolean DEVELOPER_MODE = false;
-	
+
 	public static boolean cfmInstalled = false;
 	public static boolean galacticraftInstalled = false;
 
@@ -77,12 +77,12 @@ public class MrCrayfishDeviceMod
 		MinecraftForge.EVENT_BUS.register(new DeviceConfig());
 
 		RegistrationHandler.init();
-		
+
 		proxy.preInit();
 	}
-	
+
 	@EventHandler
-	public void init(FMLInitializationEvent event) 
+	public void init(FMLInitializationEvent event)
 	{
 		/* Tile Entity Registering */
 		DeviceTileEntites.register();
@@ -101,13 +101,13 @@ public class MrCrayfishDeviceMod
 
 		proxy.init();
 	}
-	
+
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) 
+	public void postInit(FMLPostInitializationEvent event)
 	{
 		//cfmInstalled = Loader.isModLoaded("cfm");
 		//galacticraftInstalled = Loader.isModLoaded("galacticraftcore");
-		
+
 		proxy.postInit();
 	}
 
@@ -164,7 +164,7 @@ public class MrCrayfishDeviceMod
 		TaskManager.registerTask(TaskAddAuction.class);
 		TaskManager.registerTask(TaskGetAuctions.class);
 		TaskManager.registerTask(TaskBuyItem.class);
-		
+
 		if(!DEVELOPER_MODE)
 		{
 		}
@@ -181,12 +181,11 @@ public class MrCrayfishDeviceMod
 		}
 		if (cfmInstalled)
 		{
-		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"smart_light_controller"),ApplicationClass.class)
+		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"smart_light_controller"),ApplicationSmartLight.class)
 		}
 		if (galacticraftInstalled)
 		{
-		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"galaxy_map"),ApplicationClass.class)
-		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"telemetry_monitor"),ApplicationClass.class)
+		//ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID,"telemetry_monitor"),ApplicationGCTelemetry.class)
 		}
 
 		PrintingManager.registerPrint(new ResourceLocation(Reference.MOD_ID, "picture"), ApplicationPixelPainter.PicturePrint.class);

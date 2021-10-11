@@ -65,8 +65,18 @@ public class ApplicationSettings extends SystemApplication
 		});
 
 		layoutMain = new Menu("Home");
+		Button buttonGeneralSettings = new Button(5, 26, "General", Icons.EDIT);
+		buttonGeneralSettings.setSize(90, 20);
+		buttonGeneralSettings.setToolTip("General", "Assorted System Settings");
+		buttonGeneralSettings.setClickListener((mouseX, mouseY, mouseButton) ->
+		{
+			if(mouseButton == 0)
+			{
+				showMenu(layoutGeneral);
+			}
+		});
 
-		Button buttonColorScheme = new Button(5, 26, "Personalise", Icons.EDIT);
+		Button buttonColorScheme = new Button(25, 26, "Personalise", Icons.EDIT);
 		buttonColorScheme.setSize(90, 20);
 		buttonColorScheme.setToolTip("Personalise", "Change the wallpaper, UI colors, and more!");
 		buttonColorScheme.setClickListener((mouseX, mouseY, mouseButton) ->
@@ -76,6 +86,7 @@ public class ApplicationSettings extends SystemApplication
 				showMenu(layoutPersonalise);
 			}
 		});
+
 		layoutMain.addComponent(buttonColorScheme);
 
 		layoutGeneral = new Menu("General");
@@ -142,10 +153,21 @@ public class ApplicationSettings extends SystemApplication
 			if(mouseButton != 0)
 				return;
 
-			Dialog dialog = new Dialog.Message("This feature has not be added yet!");
+			Dialog dialog = new Dialog.Message("This feature has not been added yet!");
 			openDialog(dialog);
         });
 		layoutPersonalise.addComponent(buttonWallpaperUrl);
+
+		Button buttonEditColors = new Button(6, 150, "Color Scheme");
+		//buttonGeneralSettings.setSize(90, 20);
+		//buttonGeneralSettings.setToolTip("General", "Assorted System Settings");
+		buttonEditColors.setClickListener((mouseX, mouseY, mouseButton) ->
+		{
+			if(mouseButton == 0)
+			{
+				showMenu(layoutColorScheme);
+			}
+		});
 
 		Button buttonReset = new Button(6, 100, "Reset Color Scheme");
 		buttonReset.setClickListener((mouseX, mouseY, mouseButton) ->
@@ -182,7 +204,7 @@ public class ApplicationSettings extends SystemApplication
 		layoutColorScheme.addComponent(comboBoxItemHighlightColor);
 
 		buttonColorSchemeApply = new Button(5, 79, Icons.CHECK);
-		buttonColorSchemeApply.setEnabled(false);
+		buttonColorSchemeApply.setEnabled(true);
 		buttonColorSchemeApply.setToolTip("Apply", "Set these colors as the new color scheme");
 		buttonColorSchemeApply.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
@@ -190,7 +212,7 @@ public class ApplicationSettings extends SystemApplication
 			{
 				ColorScheme colorScheme = Laptop.getSystem().getSettings().getColorScheme();
 				colorScheme.setBackgroundColor(comboBoxHeaderColor.getValue());
-				buttonColorSchemeApply.setEnabled(false);
+				buttonColorSchemeApply.setEnabled(true);
 			}
 		});
 		layoutColorScheme.addComponent(buttonColorSchemeApply);
