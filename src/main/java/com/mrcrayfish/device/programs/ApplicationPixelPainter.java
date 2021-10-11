@@ -265,13 +265,15 @@ public class ApplicationPixelPainter extends Application
 						}
 						else
 						{
-							//TODO error dialog
+							Dialog.Message dialogDelErr = new Dialog.Message("Failed to delete file");
+							openDialog(dialogDelErr);
 						}
                     });
 				}
 				else
 				{
-					//TODO error dialog
+					Dialog.Message dialogFNullErr = new Dialog.Message("The file is invalid or could not be found");
+					openDialog(dialogFNullErr);
 				}
 			}
 		});
@@ -363,7 +365,8 @@ public class ApplicationPixelPainter extends Application
 						}
 						else
 						{
-							//TODO error dialog
+							Dialog.Message dialogSaveErr = new Dialog.Message("The file could not be saved");
+							openDialog(dialogSaveErr);
 						}
 					});
 				}
@@ -381,7 +384,8 @@ public class ApplicationPixelPainter extends Application
 					}
 					else
 					{
-						//TODO error dialog
+						Dialog.Message dialogSaveErr = new Dialog.Message("The file could not be saved");
+						openDialog(dialogSaveErr);
 					}
 					return false;
 				});
@@ -443,7 +447,21 @@ public class ApplicationPixelPainter extends Application
 
 		setCurrentLayout(layoutMainMenu);
 	}
-
+	@Override
+	public boolean handleFile(File file)
+	{
+		if(file.isForApplication(this))
+		{
+			Picture picture = Picture.fromFile(file);
+			canvas.setPicture(picture);
+			setCurrentLayout(layoutDraw);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 	@Override
 	public void load(NBTTagCompound tagCompound)
 	{
