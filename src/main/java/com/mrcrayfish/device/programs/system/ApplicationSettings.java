@@ -187,36 +187,43 @@ public class ApplicationSettings extends SystemApplication
 		layoutColorScheme.addComponent(buttonPrevious);
 
 		ComboBox.Custom<Integer> comboBoxTextColor = createColorPicker(145, 26);
+		private Label txtcolorLabel;
 		txtcolorLabel = new Label("Text Color", 6, 26);
 		layoutColorScheme.addComponent(txtcolorLabel);
 		layoutColorScheme.addComponent(comboBoxTextColor);
 
 		ComboBox.Custom<Integer> comboBoxTextSecondaryColor = createColorPicker(145, 44);
+		private Label txtScolorLabel;
 		txtScolorLabel = new Label("Text Secondary Color", 6, 44);
-		layoutColorScheme.addComponent(bgScolorLabel);
+		layoutColorScheme.addComponent(txtScolorLabel);
 		layoutColorScheme.addComponent(comboBoxTextSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxHeaderColor = createColorPicker(145, 62);
+		private Label headerColorLabel;
 		headerColorLabel = new Label("Header Color", 6, 62);
 		layoutColorScheme.addComponent(headerColorLabel);
 		layoutColorScheme.addComponent(comboBoxHeaderColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundColor = createColorPicker(145, 80);
+		private Label bgcolorLabel;
 		bgcolorLabel = new Label("Background Color", 6, 80);
 		layoutColorScheme.addComponent(bgcolorLabel);
 		layoutColorScheme.addComponent(comboBoxBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxBackgroundSecondaryColor = createColorPicker(145, 98);
+		private Label bgScolorLabel;
 		bgScolorLabel = new Label("Background Secondary Color", 6, 98);
 		layoutColorScheme.addComponent(bgScolorLabel);
 		layoutColorScheme.addComponent(comboBoxBackgroundSecondaryColor);
 
 		ComboBox.Custom<Integer> comboBoxItemBackgroundColor = createColorPicker(145, 116);
+		private Label itembgcolorLabel;
 		itembgcolorLabel = new Label("Item Background Color", 6, 116);
 		layoutColorScheme.addComponent(itembgcolorLabel);
 		layoutColorScheme.addComponent(comboBoxItemBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxItemHighlightColor = createColorPicker(145, 134);
+		private Label itemhiglightcolorLabel;
 		itemhiglightcolorLabel = new Label("Item Highlight Color", 6, 134);
 		layoutColorScheme.addComponent(itemhighlightcolorLabel);
 		layoutColorScheme.addComponent(comboBoxItemHighlightColor);
