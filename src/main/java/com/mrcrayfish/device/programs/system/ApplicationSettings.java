@@ -46,7 +46,7 @@ public class ApplicationSettings extends SystemApplication
 	private Label bgScolorLabel;
 	private Label bgcolorLabel;
 	private Label itembgcolorLabel;
-	private Label itemhiglightcolorLabel;
+	private Label itemhighlightcolorLabel;
 
 	private Layout layoutColorScheme;
 	private Button buttonColorSchemeApply;
@@ -225,7 +225,7 @@ public class ApplicationSettings extends SystemApplication
 		layoutColorScheme.addComponent(comboBoxItemBackgroundColor);
 
 		ComboBox.Custom<Integer> comboBoxItemHighlightColor = createColorPicker(145, 134);
-		itemhiglightcolorLabel = new Label("Item Highlight Color", 6, 134);
+		itemhighlightcolorLabel = new Label("Item Highlight Color", 6, 134);
 		layoutColorScheme.addComponent(itemhighlightcolorLabel);
 		layoutColorScheme.addComponent(comboBoxItemHighlightColor);
 
