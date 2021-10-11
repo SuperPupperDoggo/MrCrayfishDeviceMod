@@ -76,7 +76,7 @@ public class ApplicationSettings extends SystemApplication
 			}
 		});
 
-		Button buttonColorScheme = new Button(25, 26, "Personalise", Icons.EDIT);
+		Button buttonColorScheme = new Button(105, 26, "Personalise", Icons.EDIT);
 		buttonColorScheme.setSize(90, 20);
 		buttonColorScheme.setToolTip("Personalise", "Change the wallpaper, UI colors, and more!");
 		buttonColorScheme.setClickListener((mouseX, mouseY, mouseButton) ->
@@ -87,6 +87,7 @@ public class ApplicationSettings extends SystemApplication
 			}
 		});
 
+		layoutMain.addComponent(buttonGeneralSettings);
 		layoutMain.addComponent(buttonColorScheme);
 
 		layoutGeneral = new Menu("General");
@@ -158,8 +159,8 @@ public class ApplicationSettings extends SystemApplication
         });
 		layoutPersonalise.addComponent(buttonWallpaperUrl);
 
-		Button buttonEditColors = new Button(6, 150, "Color Scheme");
-		//buttonGeneralSettings.setSize(90, 20);
+		Button buttonEditColors = new Button(6, 100, "Color Scheme");
+		//buttonEditColors.setSize(90, 20);
 		//buttonGeneralSettings.setToolTip("General", "Assorted System Settings");
 		buttonEditColors.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
@@ -169,7 +170,7 @@ public class ApplicationSettings extends SystemApplication
 			}
 		});
 
-		Button buttonReset = new Button(6, 100, "Reset Color Scheme");
+		Button buttonReset = new Button(116, 100, "Reset Color Scheme");
 		buttonReset.setClickListener((mouseX, mouseY, mouseButton) ->
 		{
             if(mouseButton == 0)
@@ -177,6 +178,7 @@ public class ApplicationSettings extends SystemApplication
 				Laptop.getSystem().getSettings().getColorScheme().resetDefault();
 			}
         });
+		layoutPersonalise.addComponent(buttonEditColors);
 		layoutPersonalise.addComponent(buttonReset);
 
 		layoutColorScheme = new Menu("UI Colors");
